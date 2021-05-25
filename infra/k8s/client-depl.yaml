@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
         - name: client
-          image: us.gcr.io/ticketo-dev/client
+          image: vijethab/client
+          # image: us.gcr.io/ticketo-dev/client
 ---
 apiVersion: v1
 kind: Service
