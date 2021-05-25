@@ -9,10 +9,13 @@ deploy:
 build:
   # local:
   # push: false
-  googleCloudBuild:
-    projectId: ticketo-dev
+  # googleCloudBuild:
+  #  projectId: ticketo-dev
+  local:
+    push: false
   artifacts:
-    - image: us.gcr.io/ticketo-dev/auth
+    - image: vijethab/auth
+    # - image: us.gcr.io/ticketo-dev/auth
       context: auth
       docker:
         dockerfile: Dockerfile
@@ -20,7 +23,8 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
-    - image: us.gcr.io/ticketo-dev/client
+    - image: vijethab/client
+    # - image: us.gcr.io/ticketo-dev/client
       context: client
       docker:
         dockerfile: Dockerfile
@@ -28,7 +32,8 @@ build:
         manual:
           - src: '**/**/*.js'
             dest: .
-    - image: us.gcr.io/ticketo-dev/tickets
+    - image: vijethab/tickets
+    # - image: us.gcr.io/ticketo-dev/tickets
       context: tickets
       docker:
         dockerfile: Dockerfile
@@ -36,7 +41,8 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
-    - image: us.gcr.io/ticketo-dev/orders
+    - image: vijethab/orders
+    # - image: us.gcr.io/ticketo-dev/orders
       context: orders
       docker:
         dockerfile: Dockerfile
@@ -44,7 +50,8 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
-    - image: us.gcr.io/ticketo-dev/expiration
+    - image: vijethab/expiration
+    # - image: us.gcr.io/ticketo-dev/expiration
       context: expiration
       docker:
         dockerfile: Dockerfile
@@ -52,7 +59,8 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
-    - image: us.gcr.io/ticketo-dev/payments
+    - image: vijethab/payments        
+    # - image: us.gcr.io/ticketo-dev/payments
       context: payments
       docker:
         dockerfile: Dockerfile

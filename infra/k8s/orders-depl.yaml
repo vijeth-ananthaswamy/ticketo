@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
         - name: orders
-          image: us.gcr.io/ticketo-dev/orders
+          image: vijethab/orders
+          # image: us.gcr.io/ticketo-dev/orders
           env:
             - name: NATS_CLIENT_ID
               valueFrom:
