@@ -19,7 +19,7 @@ const LandingPage = ({ currentUser, tickets }) => {
   console.log(ticketList);
   return (
     <div>
-      <h3>Tickets</h3>
+      <h3>Get Tickets</h3>
       <table className="table">
         <thead>
           <tr>
